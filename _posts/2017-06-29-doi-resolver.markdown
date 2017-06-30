@@ -10,6 +10,8 @@ As a graduate student having to read academic papers on a regular basis, frequen
 
 I have long wanted to change that. 
 
+<!--more-->
+
 The first idea that comes to mind is to write a browser plugin that takes the standard doi format (like `doi:10.1000/182`) in the address bar and spits out whatever website [doi.org][doi] gives you. I thought, ok, it should *not* be so hard since these browsers already take urls with things like `https:` or `ftp:`. It then turns out that browsers are really not that configurable. Granted that you could add buttons to the toolbar, access and modify page contents with javascript, these are unfortunately almost all you can do in a browser plugin. There does not seem to be an easy way of dymanically processing what is requested in the address bar and redirecting the user to another page. [^note]
 
 I then realized, writing a plugin for [Spotlight][wiki_spotlight] might be a better idea. For those who don't use MacOS, Spotlight is a feature in MacOS that does system-wide searches of apps, files, calendar events, emails, etc. It can be conveniently called out via the (default) keyboard shortcut `⌘-Space`, so it would be even simpler to use than a browser plugin, for which you would have to open up the browser first! However, one question remains: given how Apple dislikes software configurability (a common thing among most commercial softwares), is it even possible to do that?
@@ -19,7 +21,9 @@ The answer turns out to be *yes*. Of course there's no official API for Spotligh
 After struggling a bit with Apple's [System Integrity Protection][wiki_sip], Flashlight is installed on my computer. Writing the script is easier than I could have imagined. Basically, all plugins are stored in `~/Library/FlashlightPlugins`, where each plugin (*aka* its descriptive files and the python script) resides in folders named `xxx.bundle`. The required files are as few as three: `info.json` defines the name and other attributes of the plugin, `examples.txt` has the string patterns that Flashlight will have to match, and `plugin.py` contains the functions Flashlight will call when patterns are matched. For a more detailed walkthrough for creating a Flashlight plugin, I recommend reading [this article][plugin_example] on its wiki. 
 
 I then set out to write the plugin. The `examples.txt` file is as simple as two lines:
+
 {% gist codetrick/c746ad7c3f3088b2301605ff6dbc4378 %}
+
 This basically asks Flashlight to match any queries that look like `doi:10.1000/182` or `doi␣10.1103/PhysRev.106.162`, and then pass the matched text as the value to the key `'~name'` in a python dictionary object to the function `results(fields, original_query)` defined in `plugin.py`. The full script looks like this:
 
 {% gist codetrick/0f766aa7338eb3e4c5a9b5c7dccefbc8 %}

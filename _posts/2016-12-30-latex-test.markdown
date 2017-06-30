@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Latex testing"
-published: false
-categories: blog test
+published: true
+categories: test
 ---
 This is a math block:
 $$ 
