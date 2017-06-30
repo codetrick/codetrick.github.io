@@ -11,7 +11,12 @@ title: Home
     <article class="post_card post">
       <header class="post_header">
         <h2 class="post_title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a></h2>
-        <time class="post_date">{{ post.date | date: "%d %B %Y, %A" }}</time>
+        <span class="article_meta">
+          <time class="post_date">{{ post.date | date: "%b %d, %Y" }}</time>
+          {% if post.comments %}
+          · <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.id}}"></a>
+          {% endif %}
+        </span>
       </header>
       <div class="post_excerpt">
         <p>

@@ -188,8 +188,6 @@ input#menu-toggle {
 }
 
 .post_date {
-  color:#888;
-  font-size:1.4rem;
 }
 
 p.readmore {
@@ -210,7 +208,8 @@ p.readmore {
 }
 
 .article_meta {
-
+  color:#888;
+  font-size:1.4rem;
 }
 
 .post_excerpt p a {
@@ -221,6 +220,11 @@ p.readmore {
 .post_excerpt p a:hover {
   color:red;
   border-bottom:1px dotted red;
+}
+
+.article-header {
+  margin-bottom:2rem;
+  border-bottom:1px solid #ddd;
 }
 
 .article-content a {
@@ -293,6 +297,15 @@ p.readmore {
   .bio {
     color:#999;
   }
+  .bio a {
+    color:#999;
+    border-bottom:1px dotted;
+  }
+  .bio a:hover {
+    color:black;
+    border-bottom:1px dotted;
+    text-decoration:none;
+  }
 }
 
 
@@ -348,11 +361,6 @@ body.custom-background {
    letter-spacing:0;
    border-bottom: 1px solid #ddd;
   }
-}
-
-div.post_title span.date {
-  font-size: 80%;
-  color: $grey-color;
 }
 
 /* Pagination */

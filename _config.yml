@@ -24,6 +24,9 @@ github_username:  codetrick
 timezone: America/Los_Angeles 
 
 excerpt_separator: <!--more-->
+permalink: /:categories/:title.html
+
+disqus_shortname: 'fyang2blog'
 
 # Build settings
 markdown: kramdown
@@ -34,3 +37,11 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
+
+defaults:
+  -
+    scope:
+      path: "_posts"
+    values:
+      author: "Fan Yang"
+      comments: true
