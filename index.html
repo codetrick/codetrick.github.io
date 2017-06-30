@@ -12,10 +12,13 @@ title: Home
       <header class="post_header">
         <h2 class="post_title"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title}}</a></h2>
         <span class="article_meta">
-          <time class="post_date">{{ post.date | date: "%b %d, %Y" }}</time>
+          <time class="post_date">{{ post.date | date: "%b %-d, %Y" }}</time>
           {% if post.comments %}
           · <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.id}}"></a>
           {% endif %}
+          {% if post.last_modified_at %}
+          · (Updated: <time class="post_date">{{ post.last_modified_at | date: "%b %-d, %Y" }}</time>)
+          {% endif %}         
         </span>
       </header>
       <div class="post_excerpt">

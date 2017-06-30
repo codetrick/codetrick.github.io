@@ -2,6 +2,7 @@
 layout: post
 title:  "DOI Resolver Plugin for Spotlight"
 date: 2017-06-29 20:27 -0800
+last_modified_at: 2017-06-30
 published: true
 categories: programming
 ---
