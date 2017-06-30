@@ -8,7 +8,7 @@ layout: default
     <p class="article_meta">
       <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
       {% if page.comments %}
-      · <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{post.id}}"></a>
+      · <a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{page.id}}"></a>
       {% endif %}
       {% if page.last_modified_at %}
       · (Updated: <time class="post_date">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)

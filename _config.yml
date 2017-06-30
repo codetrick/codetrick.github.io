@@ -27,6 +27,7 @@ excerpt_separator: <!--more-->
 permalink: /:categories/:title.html
 
 disqus_shortname: 'fyang2blog'
+home_post_count_limit: 10
 
 # Build settings
 markdown: kramdown
