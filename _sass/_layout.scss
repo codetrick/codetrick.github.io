@@ -500,3 +500,8 @@ there.
    opacity: 0;
  }
 }
+
+/* fix underlines in gist layout */
+.gist th,
+.gist td {
+  border-bottom: none}
