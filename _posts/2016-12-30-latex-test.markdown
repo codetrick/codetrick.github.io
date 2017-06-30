@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Latex testing"
-published: true
+published: false
 categories: blog test
 ---
 This is a math block:
