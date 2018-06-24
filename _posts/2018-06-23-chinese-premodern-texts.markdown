@@ -50,6 +50,8 @@ Luckily, all pre-modern Chinese texts are in the public domain now. Many digital
 [搜韻](https://sou-yun.com/)
 : A Chinese phonology dictionary lookup tool designed for 詩 *Shi* and 詞 *Ci* writing, with a large *Shi* and *Ci* corpus.
 
+[漢字古今音資料庫](http://xiaoxue.iis.sinica.edu.tw/ccr/)
+: Database for historic and dialectal Chinese phonology. Developed by National Taiwan University and Funded by The Ministry of Science and Technology of the Republic of China.
 
 I will keep updating this page for web resources I find useful in the future.
 
