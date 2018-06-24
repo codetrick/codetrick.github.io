@@ -212,12 +212,12 @@ p.readmore {
   font-size:1.4rem;
 }
 
-.post_excerpt p a {
+.post_excerpt a {
   border-bottom:1px dotted red;
   text-decoration:none;
 }
 
-.post_excerpt p a:hover {
+.post_excerpt a:hover {
   color:red;
   border-bottom:1px dotted red;
 }
